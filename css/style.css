@@ -1,25 +1,29 @@
-h1 {
-  color: green;
+body{
+	/*background-image: url(../img/mountains.jpg);*/
+	background-color: blue;
+	background-size: 100%;
 }
 
-.make-me-red {
-  color: red;
+.jumbotron {
+	color: #FFFFFF;
+	border: solid;
+	background-color: rgba(0, 0, 0, 0.5);
 }
 
-.make-me-huge {
-  font-size: 40px;
+.navbar {
+	border: 0;
+	background-color: rgba(0, 0, 0, 0.5);
 }
 
-.make-me-centered {
-  text-align: center;
+.panel-default {
+	background-color: rgba(0, 0, 0, 0.5);
 }
 
-#greeting {
-  text-align: right;
-  color: gray;
-  font-weight: 700;
-  font-size: 40px;
+.panel-heading {
+	font-size: 18px;
+	font-weight: bold;
 }
- .jumbotron {
- 	text-align: center
- }
+
+.panel-body {
+	color: #FFFFFF;
+}

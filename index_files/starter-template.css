@@ -5,3 +5,13 @@ body {
   padding: 40px 15px;
   text-align: center;
 }
+.panel-primary > .panel-heading {
+    background-image: none;
+    background-color: black;
+    border-color: black;
+    color: white;
+}
+
+.panel-primary {
+    border-color: black;
+}

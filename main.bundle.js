@@ -1,4 +1,4 @@
-webpackJsonp([1],{
+webpackJsonp([2],{
 
 /***/ "../../../../../src async recursive":
 /***/ (function(module, exports) {
@@ -105,6 +105,7 @@ var appRoutes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' },
     { path: '**', component: __WEBPACK_IMPORTED_MODULE_7__page_not_found_page_not_found_component__["a" /* PageNotFoundComponent */] }
 ];
+var appVersion = __webpack_require__.e/* import() */(0).then(__webpack_require__.bind(null, "../../../../../package.json")).version;
 var AppModule = (function () {
     function AppModule() {
     }
@@ -144,7 +145,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, ".footer {\r\n\tbackground-color: #dddddd;\r\n\theight: 80px;\r\n}\r\n\r\n.footer-text {\r\n\ttext-align: center;\r\n}", ""]);
 
 // exports
 
@@ -157,7 +158,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/footer/footer.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  footer works!\n</p>\n"
+module.exports = "<!-- TODO: Display versions from package.json -->\n<!-- TODO: Show last updated from github push -->\n<div class=\"footer\">\n  <p class=\"footer-text\">\n    Last Updated: Fall 2017 <br/> Made with Angular-cli, Angular Material, Bootstrap\n  </p>\n</div>\n"
 
 /***/ }),
 
@@ -218,7 +219,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/home/home.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<app-menu>Hi</app-menu>"
+module.exports = "<!-- TODO: Make template thing for standard pages -->\r\n<app-menu>Hi</app-menu>\r\n<app-footer></app-footer>"
 
 /***/ }),
 
@@ -266,7 +267,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "#sidebarBtn {\r\n\tbackground-color: #f7f7f7;\r\n}\r\n\r\n.example-container {\r\n  width: 100%;\r\n  height: calc(100vh - 80px);\r\n}\r\n\r\n.example-sidenav-content {\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  height: 100%;\r\n  -webkit-box-align: center;\r\n      -ms-flex-align: center;\r\n          align-items: center;\r\n  -webkit-box-pack: center;\r\n      -ms-flex-pack: center;\r\n          justify-content: center;\r\n}\r\n\r\n.example-sidenav {\r\n  padding: 20px;\r\n}\r\n", ""]);
+exports.push([module.i, "#sidebarBtn {\r\n\tbackground-color: #f7f7f7;\r\n}\r\n\r\n.example-container {\r\n  width: 100%;\r\n  /* TODO: move somewhere else, Minus header and footer */\r\n  /* TODO: Get rid of white space under it */\r\n  height: calc(100vh - 145px);\r\n}\r\n\r\n.example-sidenav-content {\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  height: 100%;\r\n  -webkit-box-align: center;\r\n      -ms-flex-align: center;\r\n          align-items: center;\r\n  -webkit-box-pack: center;\r\n      -ms-flex-pack: center;\r\n          justify-content: center;\r\n}\r\n\r\n.example-sidenav {\r\n  padding: 20px;\r\n}\r\n", ""]);
 
 // exports
 

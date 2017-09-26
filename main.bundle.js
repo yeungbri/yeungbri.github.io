@@ -124,9 +124,10 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* RouterModule */].forRoot(appRoutes, { enableTracing: true }),
             __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
-            __WEBPACK_IMPORTED_MODULE_4__angular_material__["a" /* MdIconModule */],
-            __WEBPACK_IMPORTED_MODULE_4__angular_material__["b" /* MdListModule */],
-            __WEBPACK_IMPORTED_MODULE_4__angular_material__["c" /* MdSidenavModule */]
+            __WEBPACK_IMPORTED_MODULE_4__angular_material__["a" /* MdCardModule */],
+            __WEBPACK_IMPORTED_MODULE_4__angular_material__["b" /* MdIconModule */],
+            __WEBPACK_IMPORTED_MODULE_4__angular_material__["c" /* MdListModule */],
+            __WEBPACK_IMPORTED_MODULE_4__angular_material__["d" /* MdSidenavModule */]
         ],
         providers: [],
         bootstrap: [__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */]]
@@ -158,7 +159,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/footer/footer.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!-- TODO: Display versions from package.json -->\n<!-- TODO: Show last updated from github push -->\n<div class=\"footer\">\n  <p class=\"footer-text\">\n    Last Updated: Fall 2017 <br/> Made with Angular-cli, Angular Material, Bootstrap\n  </p>\n</div>\n"
+module.exports = "<!-- TODO: Display versions from package.json -->\n<!-- TODO: Show last updated from github push -->\n<!-- TODO: Perhaps add fade down -->\n<div class=\"footer\">\n  <p class=\"footer-text\">\n    Last Updated: Fall 2017 <br/> Made with Angular-cli, Angular Material, Bootstrap\n  </p>\n</div>\n"
 
 /***/ }),
 
@@ -219,7 +220,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/home/home.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!-- TODO: Make template thing for standard pages -->\r\n<app-menu>Hi</app-menu>\r\n<app-footer></app-footer>"
+module.exports = "<!-- TODO: Make template thing for standard pages -->\r\n<app-menu>\r\n  <!-- TODO: Seperate out tiles? -->\r\n  <div class=\"container\">\r\n  <div *ngFor=\"let section of sections\">\r\n  \t<h5 class=\"sectionHeader\">{{ section.section }}</h5>\r\n    <div class=\"row card-group\">\r\n      <div class=\"col-3\" *ngFor=\"let tile of section.tiles\">\r\n      <a [href]=\"tile.href\">\r\n        <md-card>\r\n          <img md-card-image [src]=\"tile.img\" class=\"tileImg\" alt=\"Tile Photo\">\r\n          <md-card-content> \r\n          \t<p>{{ tile.title }}</p>\r\n          </md-card-content>\r\n        </md-card>\r\n        </a>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  </div>\r\n</app-menu>\r\n<app-footer></app-footer>\r\n"
 
 /***/ }),
 
@@ -241,6 +242,44 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var HomeComponent = (function () {
     function HomeComponent() {
+        this.placeholder = '../../assets/img/placeholder.jpg';
+        this.sw = {
+            section: 'Software',
+            tiles: [
+                {
+                    img: this.placeholder,
+                    title: 'Personal Website',
+                    href: '/pw'
+                },
+                {
+                    img: this.placeholder,
+                    title: 'GCal Date Selector',
+                    href: 'https://www.google.com'
+                },
+                {
+                    img: this.placeholder,
+                    title: 'GCal Date Selector',
+                    href: 'https://www.google.com'
+                },
+                {
+                    img: this.placeholder,
+                    title: 'GCal Date Selector',
+                    href: 'https://www.google.com'
+                },
+                {
+                    img: this.placeholder,
+                    title: 'GCal Date Selector',
+                    href: 'https://www.google.com'
+                },
+                {
+                    img: this.placeholder,
+                    title: 'GCal Date Selector',
+                    href: 'https://www.google.com'
+                }
+            ],
+            link: '/sw'
+        };
+        this.sections = [this.sw];
     }
     HomeComponent.prototype.ngOnInit = function () {
     };
@@ -267,7 +306,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "#sidebarBtn {\r\n\tbackground-color: #f7f7f7;\r\n}\r\n\r\n.example-container {\r\n  width: 100%;\r\n  /* TODO: move somewhere else, Minus header and footer */\r\n  /* TODO: Get rid of white space under it */\r\n  height: calc(100vh - 145px);\r\n}\r\n\r\n.example-sidenav-content {\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  height: 100%;\r\n  -webkit-box-align: center;\r\n      -ms-flex-align: center;\r\n          align-items: center;\r\n  -webkit-box-pack: center;\r\n      -ms-flex-pack: center;\r\n          justify-content: center;\r\n}\r\n\r\n.example-sidenav {\r\n  padding: 20px;\r\n}\r\n", ""]);
+exports.push([module.i, "#sidebarBtn {\r\n\tbackground-color: #f7f7f7;\r\n}\r\n\r\n.example-container {\r\n  width: 100%;\r\n  /* TODO: move somewhere else, Minus header and footer */\r\n  /* TODO: Get rid of white space under it */\r\n  height: calc(100vh - 80px);\r\n}\r\n\r\n.example-sidenav-content {\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  height: 100%;\r\n  -webkit-box-align: center;\r\n      -ms-flex-align: center;\r\n          align-items: center;\r\n  -webkit-box-pack: center;\r\n      -ms-flex-pack: center;\r\n          justify-content: center;\r\n}\r\n\r\n.example-sidenav {\r\n  padding: 20px;\r\n}\r\n", ""]);
 
 // exports
 

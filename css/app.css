@@ -107,7 +107,7 @@ a:visited {
 .tag {
   text-align: center;
   width: 5em;
-  border: 1px dotted green;
+  border: 1px solid #263c75;
   /* TODO: fix text so it's not cut off, scrolling? */
   overflow: hidden;
 }

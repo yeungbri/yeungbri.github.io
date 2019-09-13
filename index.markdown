@@ -1,6 +1,10 @@
 ---
 layout: default
 title: Brian Yeung
+categories:
+  - Web Development
+  - Database 
+# use colors, symbols(stars), border highlights, italics to denote strength/interest
 techs:
   Languages:
     - Python
@@ -8,28 +12,30 @@ techs:
     - SQL
     - Java
     - C++
-    # - Bash (Shell)
+    - Bash/Shell
     - Ruby
     - PHP
     - Racket
     - OCaml
     - C
     - Scala
+  Libraries: 
+    - Node.js
+    - TensorFlow
   Web Frameworks:
     - React.js
     - Angular.js
     - Django
-    # - Ruby on Rails
+    # Keep it on one line
+    - Ruby&nbsp;on&nbsp;Rails
     - Spring
     - Laravel
-  Libraries: 
-    - Node.js
-    - TensorFlow
   Databases:
     - PostgreSQL
     - MySQL
     - Elasticsearch
   Platforms/Infra: 
+    - Git
     - "*nix"
     - Docker
     - K8s
@@ -40,13 +46,7 @@ techs:
     - OOD
     - MVC
     - REST
-    # - Network Layers
-  Tools:
-    - Git
-    - Gitlab
-    - Agile
-    - Jira
-    - Confluence
+    - Networks
   Testing:
     - Selenium
 ---
@@ -95,24 +95,27 @@ techs:
 <div class = "left">
 <section>
   <h2>Experience</h2>
+  <p>Filter by technology</p>
   <div class = "tag-container">
-  {% for category in page.techs %}
-    <div class = "tag-header">
-    <h4>{{category[0]}}</h4>
-    </div>
-    {% for item in category[1] %}
-      <p class = "tag">{{item}}</p>
+    {% for category in page.techs %}
+      <div class = "tag-header highlight">
+        {{category[0]}}
+      </div>
+      {% for item in category[1] %}
+        <div class = "tag">
+          <div style = "font-size: 12px">
+            {{item}}
+          </div>
+        </div>
+      {% endfor %}
+      <div class = "tag-header"></div>
     {% endfor %}
-  {% endfor %}
   </div>
   <!-- Show off mind map of skills, tools, frameworks to prove valid mental model -->
   <p>
   Paste your job description!
   (Languages 'Python', Frameworks 'React', Knowledge 'OOD') <br />
-  <h3>Technology I've Touched</h3> (varying capacities) <br />
   Category: Web Development, Cybersecurity, DevOps, Machine Learning <br />
-
-  Python, Javascript, Java, Ruby on Rails, jenkins, gitlab, ood, design paradigms, algorithms, 
   </p>
   <p>
     Capacities:

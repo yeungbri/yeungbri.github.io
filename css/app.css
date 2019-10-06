@@ -132,3 +132,66 @@ a:visited {
 .parent .right {
   grid-area: right;
 }
+
+.thing-container {
+  display: grid;
+  height: 1000px;
+  /* width: 1000px; */
+  grid-template-columns: repeat(6, 6fr);
+  /* grid-auto-rows: 1fr; */
+  grid-template-rows: repeat(6, 6fr);
+  /* grid-gap: 2em; */
+  grid-auto-flow: row dense;
+}
+
+.item {
+  
+  text-align: center;
+  background-color: #263c75;
+  border: 2px solid #263c75;
+  overflow: hidden;
+
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.thing-img:hover {
+  opacity:0.1;
+  /* filter:alpha(opacity=100);  */
+}
+
+.item:nth-child(3n) {
+  /* Normal */
+  grid-row: span 1;
+  grid-column: span 1;
+  background-color: #263c75;
+}
+
+.item:nth-child(5n) {
+  /* Large */
+  grid-row: span 2;
+  grid-column: span 2;
+  background-color: #263c75;
+}
+
+.item:nth-child(7n) {
+  /* Huge */
+  grid-row: span 3;
+  grid-column: span 3;
+  background-color: #263c75;
+}
+
+.thing-img {
+  /* max-width: 100%; */
+  /* max-height: 100%; */
+  height: 100%; width: 100%; object-fit: cover;
+  opacity:0.5;
+}
+
+/* Top left text */
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}

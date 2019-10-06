@@ -84,14 +84,19 @@ techs:
 <ul class="nav">
   <li><a href="/">Home</a></li>
   <li><a href="/">About</a></li>
+  {% comment %}
   <li><a href="/">Blog</a></li>
   <li><a href="/">Notes</a></li>
+  {% endcomment %}
   <li><a href="/">Resume</a></li>
 </ul>
+
 </div>
+
 
 <!-- socials on the side like bc -->
 
+{% comment %} 
 <div class = "left">
 <section>
   <h2>Experience</h2>
@@ -141,5 +146,23 @@ techs:
   </ul>
 </section>
 </div>
+{% endcomment %}
 </div>
+<div style="padding-top: 20px">
+<div class="thing-container">
+  <div class="item">
+    <img class="thing-img" src="images/profile.png">
+    <div class="top-left">Project Title</div>
+  </div>
+  <div class="item"><img class="thing-img" src="images/profile.png"></div>
+  <div class="item"><img class="thing-img" src="images/profile.png"></div>
+  <div class="item"><img class="thing-img" src="images/profile.png"></div>
+  <div class="item"><img class="thing-img" src="images/profile.png"></div>
+  <div class="item"><img class="thing-img" src="images/profile.png"></div>
+  <div class="item"><img class="thing-img" src="images/profile.png"></div>
+  <div class="item"><img class="thing-img" src="images/profile.png"></div>
+  <div class="item"><img class="thing-img" src="images/profile.png"></div>
+  <div class="item"><img class="thing-img" src="images/profile.png"></div>
+</div>
+
 </div>

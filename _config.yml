@@ -31,8 +31,8 @@ collections:
 
 sass:
   load_paths:
-    - _sass
     - node_modules
+    # - _sass
 
 # Exclude from processing.
 # The following items will not be processed, by default.

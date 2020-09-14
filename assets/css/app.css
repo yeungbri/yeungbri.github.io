@@ -50,3 +50,19 @@ a:link, a:hover, a:visited {
   transform: translateY(-50%);
 }
 
+@media (max-width: 575px) {
+  .navbar .navbar-nav {
+      display: inline-block;
+      float: none;
+  }
+  
+  .navbar .navbar-collapse {
+      text-align: center;
+  }
+}
+
+/* .navbar-nav > li{
+
+  margin-left:2em;
+  margin-right:2em;
+} */

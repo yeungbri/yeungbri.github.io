@@ -1,0 +1,52 @@
+@font-face {
+  font-family: "bebasneue";
+  src: url("../fonts/bebas_neue.eot") format('embedded-opentype'),
+    url('../fonts/bebas_neue.woff2') format('woff2'),
+    url('../fonts/bebas_neue.woff') format('woff'),
+    url('../fonts/bebas_neue.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: "calibre";
+  src: url('../fonts/Calibre-Semibold.woff2') format('woff2'),
+    url('../fonts/Calibre-Semibold.woff') format('woff'),
+    url('../fonts/Calibre-Semibold.ttf') format('truetype');
+}
+
+* {
+  margin: 0;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+a:link, a:hover, a:visited {
+  color: #06a7d4;
+  text-decoration: none;
+}
+
+@media (min-width: 760px) {
+  #headshot-container {
+    text-align:right;padding-right: 30px;
+  }
+}
+@media (max-width: 730px) {
+  #headshot-container {
+    text-align:center;
+  }
+  #profile-container {
+    text-align:center;
+  }
+}
+
+.section {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+

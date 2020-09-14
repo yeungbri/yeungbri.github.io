@@ -49,7 +49,6 @@ techs:
     - Selenium
 ---
 
-{% comment %} 
 <section>
   <h2>Experience</h2>
   <p>Filter by technology</p>
@@ -97,4 +96,3 @@ techs:
 
   </ul>
 </section>
-{% endcomment %}

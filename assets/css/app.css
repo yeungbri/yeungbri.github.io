@@ -18,6 +18,17 @@
   font-family: 'Ubuntu', sans-serif;
 }
 
+body {
+  color: #95a2c2;
+  background-color: #0f1933;
+}
+
+#content-container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 10px;
+}
+
 a:link, a:hover, a:visited {
   color: #06a7d4;
   text-decoration: none;

@@ -1,10 +1,4 @@
----
-layout: default
-title: Brian Yeung
----
-<div style="max-width: 1000px;
-  margin: auto;
-  padding: 10px;">
+<div style="">
 
 {% include home/profile.html %}
 

@@ -2,6 +2,6 @@
 
 {% include home/profile.html %}
 
-<!-- socials on the side like bc -->
+{% include home/updates.html %}
 
 </div>

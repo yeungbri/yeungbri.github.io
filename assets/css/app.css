@@ -76,8 +76,10 @@ a:link, a:hover, a:visited {
   padding-left: 1em;
 }
 
-/* .navbar-nav > li{
-
-  margin-left:2em;
-  margin-right:2em;
-} */
+.vertical-line {
+  border-left: 6px solid #95a2c2;
+  height: 500px;
+  left: 50%;
+  margin-left: -3px;
+  top: 0;
+}

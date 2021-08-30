@@ -10,16 +10,16 @@ features:
     link: projects
   - name: Reading List
     icon: bookmark-check
-    desc: Insightful notes on books and blogs
+    desc: Notes on insightful books and articles
     link: /reading-list
-  - name: Leetcode
-    icon: calendar3
-    desc: Interview prep profile
-    link: https://leetcode.com/yeungbri/
   - name: Open Source
     icon: github
     desc: Contributions to open source projects
     link: https://github.com/yeungbri
+  - name: Leetcode
+    icon: calendar3
+    desc: Interview prep profile
+    link: https://leetcode.com/yeungbri/
 ---
 
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -88,6 +88,7 @@ features:
     </div>
   </section>
 
+<h2 class="pb-2 border-bottom">Features</h2>
 <div class="container px-4 py-5" id="icon-grid">
   <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 g-4 py-5">
     {% for feature in page.features %}
@@ -96,7 +97,7 @@ features:
         <div>
           <h4 class="fw-bold mb-0">{{feature.name}}</h4>
           <p>{{feature.desc}}</p>
-          <a href="{{feature.link}}" target="_blank">
+          <a href="{{feature.link}}" {% if forloop.index0 == 0 %}target="_blank"{% endif %}>
             <button type="button" class="btn btn-dark">
               {{feature.name}}
             </button>
@@ -108,14 +109,14 @@ features:
 </div>
 
   <h2 class="pb-2 border-bottom">Skills</h2>
-  <p>1-10 rating based on confidence with technology</p>
+  <p class="text-center">1-10 rating based on confidence with technology</p>
   {% for category in site.data.tech%}
     <div class="row align-items-md-stretch">
       <div class="col-md-12">
         <!-- {% assign categoryEven = forloop.index0 | modulo: 2 %} -->
         {% assign categoryEven = 0 %}
         <!-- <div class="h-100 p-5 text-white bg-dark rounded-3"> -->
-        <div class="h-100 p-5 rounded-3 {% if categoryEven != 0 %}text-secondary bg-dark{% endif %}">
+        <div class="h-100 p-4 rounded-3 {% if categoryEven != 0 %}text-secondary bg-dark{% endif %}">
           <h4>{{category[0]}}</h4>
           {% for area in category[1]%}
             <!-- {% assign even = forloop.index0 | modulo: 2 %} -->

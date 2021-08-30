@@ -1,0 +1,68 @@
+Web Development:
+  Backend:
+    - name: Spring Boot
+      score: 5
+    - name: Hibernate
+      score: 4
+    - name: Ruby on Rails
+      score: 6
+  Databases:
+    - name: PostgreSQL
+      score: 7
+    - name: Elasticsearch
+      score: 5
+  Frontend:
+    - name: DOM
+      score: 6
+    - name: Javascript (ES6)
+      score: 7
+    - name: Typescript
+      score: 6
+    - name: React
+      score: 6
+    - name: CSS
+      score: 6
+    - name: MobX
+      score: 5
+  APIs:
+    - name: REST
+      score: 7
+    - name: gRPC
+      score: 7
+    - name: openAPI
+      score: 6
+    - name: graphQL
+      score: 0
+Infrastructure:
+  Containerization, Orchestration, Cloud:
+    - name: GCP
+      score: 3
+    - name: Docker
+      score: 3
+    - name: Kubernetes
+      score: 3
+  Source Control:
+    - name: Gitlab
+      score: 7
+    - name: Git
+      score: 6
+Software Development:
+  Processes:
+    - name: Scrum
+  Paradigms:
+    - name: DRY
+  Soft Skills:
+    - name: Emotion Regulation
+    - name: Influence Techniques
+    - name: Team Communication
+Programming:
+  Programming Languages:
+    - name: Python
+      score: 7
+    - name: Java
+      score: 7
+    - name: Rust
+      score: 4
+Machine Learning:
+Mobile Development:
+Cybersecurity:

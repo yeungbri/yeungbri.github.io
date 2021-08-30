@@ -6,6 +6,8 @@ Personal website available at yeungbri.github.io
 Update Deps:  
 `bundle update`
 
+Liquid:  
+https://shopify.github.io/liquid/filters/modulo/
 # Icons
 https://fontawesome.com/v4.7/icons/
 

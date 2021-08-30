@@ -1,98 +1,77 @@
 ---
-categories:
-  - Web Development
-  - Database 
-# use colors, symbols(stars), border highlights, italics to denote strength/interest
-techs:
-  Languages:
-    - Python
-    - JavaScript
-    - SQL
-    - Java
-    - C++
-    - Bash/Shell
-    - Ruby
-    - PHP
-    - Racket
-    - OCaml
-    - C
-    - Scala
-  Libraries: 
-    - Node.js
-    - TensorFlow
-  Web Frameworks:
-    - React.js
-    - Angular.js
-    - Django
-    # Keep it on one line
-    - Ruby&nbsp;on&nbsp;Rails
-    - Spring
-    - Laravel
-  Databases:
-    - PostgreSQL
-    - MySQL
-    - Elasticsearch
-  Platforms/Infra: 
-    - Git
-    - "*nix"
-    - Docker
-    - K8s
-    - AWS
-    - GCP
-    - nginx
-  Concepts: 
-    - OOD
-    - MVC
-    - REST
-    - Networks
-  Testing:
-    - Selenium
 ---
 
 <section>
-  <h2>Experience</h2>
-  <p>Filter by technology</p>
-  <div class = "tag-container">
-    {% for category in page.techs %}
-      <div class = "tag-header highlight">
-        {{category[0]}}
-      </div>
-      {% for item in category[1] %}
-        <div class = "tag">
-          <div style = "font-size: 12px">
-            {{item}}
+  <div class="container">
+    <h3>Latest Projects</h3>
+    <div class="row row-cols-sm-1 row-cols-md-3 g-4">
+      {% for post in site.posts limit: 3 %}
+        <div class="col d-flex align-items-stretch">
+          <div class="card bg-dark" style="width: 18rem">
+            <div class="card-body">
+              <h5 class="card-title">{{post.title}}</h5>
+              <p class="card-text small">{{post.desc}}</p>
+            </div>
+            <div class="card-footer">
+              <div class="float-right">
+                <a href="{{post.url}}" class="card-link">View</a>
+              </div>
+              <div class="float-left">
+                <small class="text-muted">{{post.date | date: '%B %d, %Y' }}</small>
+              </div>
+            </div>
           </div>
         </div>
       {% endfor %}
-      <div class = "tag-header"></div>
-    {% endfor %}
+    </div>
   </div>
-  <!-- Show off mind map of skills, tools, frameworks to prove valid mental model -->
-  <p>
-  Paste your job description!
-  (Languages 'Python', Frameworks 'React', Knowledge 'OOD') <br />
-  Category: Web Development, Cybersecurity, DevOps, Machine Learning <br />
-  </p>
-  <p>
-    Capacities:
-    Web Development 7/10 | Cybersecurity 4/10 | Machine Learning 1/10 | Data Science 3/10 | Mobile Development 1/10
-  </p>
-  <p>
-    Type: 6 Month Co-op <br />
-    Software Engineer @ Cigna <br />
-    Roles: FrontEnd Engineer, DevOps pipeline, Database, BackEnd Engineer
-    Frameworks: SpringBoot, Angular
-    Vendor API: ArcGIS
-  </p>
-  <p>
-    Reading List <br />
-    Leetcode Account link
-  </p>
 
-  <h2>Summary</h2>
-  <ul>
-    <li>Wellrounded engineer with 2+ years of co-op/intern experience across many disciplines.</li>
-    <li>Open source contributions</li>
+  <br />
+  <section class="py-5 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light">Software Engineering</h1>
+        <p class="lead text-muted">Overview of my software development journey</p>
+        <div class="btn-group" role="group" aria-label="Basic example">
+          <button type="button" class="btn btn-secondary"> Resume </button>
+          <button type="button" class="btn btn-secondary"> Projects </button>
+          <button type="button" class="btn btn-secondary"> Reading List </button>
+          <button type="button" class="btn btn-secondary"> Leetcode </button>
+          <button type="button" class="btn btn-secondary"> Open Source </button>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  </ul>
+  {% for category in site.data.tech%}
+    <div class="row align-items-md-stretch">
+      <div class="col-md-12">
+        <!-- {% assign categoryEven = forloop.index0 | modulo: 2 %} -->
+        {% assign categoryEven = true %}
+        <!-- <div class="h-100 p-5 text-white bg-dark rounded-3"> -->
+        <div class="h-100 p-5 rounded-3 {% if categoryEven != 0 %}text-white bg-dark{% endif %}">
+          <h3>{{category[0]}}</h3>
+          <p>1-10 rating based on confidence with technology</p>
+          {% for area in category[1]%}
+            {% assign even = forloop.index0 | modulo: 2 %}
+            <div class="container {% if even == 0 %}text-right{% endif %}">
+              <div class="row">
+                {% if even == 0 %}
+                  <div class="col-2"></div>
+                {% endif %}
+                <div class="col-10">
+                  <h5>{{area[0]}}</h5>
+                  {% for tech in area[1] %}
+                    <button type="button" class="btn {% if categoryEven != 0 %} btn-secondary {% else %} btn-dark {% endif %}">
+                      {{tech.name}} <span class="badge badge-light">{{tech.score}}</span>
+                    </button>
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  {% endfor %}
 </section>

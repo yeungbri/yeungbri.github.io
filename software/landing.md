@@ -2,7 +2,7 @@
 ---
 
 <section>
-  <div class="container">
+  <!-- <div class="container">
     <h3>Latest Projects</h3>
     <div class="row row-cols-sm-1 row-cols-md-3 g-4">
       {% for post in site.posts limit: 3 %}
@@ -24,7 +24,7 @@
         </div>
       {% endfor %}
     </div>
-  </div>
+  </div> -->
 
   <br />
   <section class="py-5 text-center container">
@@ -33,8 +33,10 @@
         <h1 class="fw-light">Software Engineering</h1>
         <p class="lead text-muted">Overview of my software development journey</p>
         <div class="btn-group" role="group" aria-label="Basic example">
-          <button type="button" class="btn btn-dark"> Resume </button>
-          <button type="button" class="btn btn-dark"> Projects </button>
+          <button type="button" class="btn btn-dark">
+            <a href="/assets/resume.pdf" target="_blank">Resume</a> 
+          </button>
+          <button type="button" class="btn btn-dark"> <a href="projects">Projects</a> </button>
           <button type="button" class="btn btn-dark"> Reading List </button>
           <button type="button" class="btn btn-dark"> Leetcode </button>
           <button type="button" class="btn btn-dark"> Open Source </button>
@@ -53,7 +55,8 @@
           <h4>{{category[0]}}</h4>
           <p>1-10 rating based on confidence with technology</p>
           {% for area in category[1]%}
-            {% assign even = forloop.index0 | modulo: 2 %}
+            <!-- {% assign even = forloop.index0 | modulo: 2 %} -->
+            {% assign even = 1 %}
             <div class="container {% if even == 0 %}text-right{% endif %}">
               <div class="row">
                 {% if even == 0 %}

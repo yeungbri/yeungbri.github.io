@@ -34,6 +34,11 @@ a:link, a:hover, a:visited {
   text-decoration: none;
 }
 
+.btn-dark, .btn-dark:hover, .btn-dark:visited {
+  color: #06a7d4;
+  text-decoration: none;
+}
+
 @media (min-width: 760px) {
   #headshot-container {
     text-align:right;padding-right: 30px;

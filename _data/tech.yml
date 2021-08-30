@@ -47,15 +47,6 @@ Infrastructure:
     - name: Git
       score: 6
 Software Development:
-  Processes:
-    - name: Scrum
-  Paradigms:
-    - name: DRY
-  Soft Skills:
-    - name: Emotion Regulation
-    - name: Influence Techniques
-    - name: Team Communication
-Programming:
   Programming Languages:
     - name: Python
       score: 7
@@ -63,6 +54,14 @@ Programming:
       score: 7
     - name: Rust
       score: 4
+  Soft Skills:
+    - name: Emotion Regulation
+    - name: Influence Techniques
+    - name: Team Communication
+  Processes:
+    - name: Scrum
+  Paradigms:
+    - name: DRY
 Machine Learning:
 Mobile Development:
 Cybersecurity:

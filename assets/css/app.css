@@ -30,7 +30,7 @@ body {
 }
 
 a:link, a:hover, a:visited {
-  color: #06a7d4;
+  color: #06a7d4 !important;
   text-decoration: none;
 }
 
